@@ -1,0 +1,138 @@
+apiVersion: v1
+entries:
+  jenkins:
+  - annotations:
+      category: Infrastructure
+      images: |
+        - name: jenkins-agent
+          image: docker.io/bitnami/jenkins-agent:0.3192.0-debian-11-r0
+        - name: jenkins
+          image: docker.io/bitnami/jenkins:2.426.1-debian-11-r0
+        - name: os-shell
+          image: docker.io/bitnami/os-shell:11-debian-11-r91
+      licenses: Apache-2.0
+    apiVersion: v2
+    appVersion: 2.426.1
+    created: "2023-11-28T04:34:15.548922258Z"
+    dependencies:
+    - name: common
+      repository: oci://registry-1.docker.io/bitnamicharts
+      tags:
+      - bitnami-common
+      version: 2.x.x
+    description: Jenkins is an open source Continuous Integration and Continuous Delivery
+      (CI/CD) server designed to automate the building, testing, and deploying of
+      any software project.
+    digest: ec699770e5452f1eacc0c7bc69e2b53ae4e49f3d09d9cf41a922392a6ea17b99
+    home: https://bitnami.com
+    icon: https://bitnami.com/assets/stacks/jenkins/img/jenkins-stack-220x234.png
+    keywords:
+    - jenkins
+    - ci
+    - cd
+    - http
+    - web
+    - application
+    maintainers:
+    - name: VMware, Inc.
+      url: https://github.com/bitnami/charts
+    name: jenkins
+    sources:
+    - https://github.com/bitnami/charts/tree/main/bitnami/jenkins
+    urls:
+    - https://github.com/RSRevanth/RSRevanth1.github.io.git/k8sb10-helm-charts/jenkins-12.4.4.tgz
+    version: 12.4.4
+  mynginx:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2023-11-28T04:34:15.549267574Z"
+    description: A Helm chart for Kubernetes
+    digest: 0559466caecd8954dade6c56eb4385046f38769449bcde41c82ee51274e2d4b6
+    name: mynginx
+    type: application
+    urls:
+    - https://github.com/RSRevanth/RSRevanth1.github.io.git/k8sb10-helm-charts/mynginx-1.0.0.tgz
+    version: 1.0.0
+  mysql:
+  - annotations:
+      category: Database
+      images: |
+        - name: mysql
+          image: docker.io/bitnami/mysql:8.0.35-debian-11-r0
+        - name: mysqld-exporter
+          image: docker.io/bitnami/mysqld-exporter:0.15.0-debian-11-r71
+        - name: os-shell
+          image: docker.io/bitnami/os-shell:11-debian-11-r91
+      licenses: Apache-2.0
+    apiVersion: v2
+    appVersion: 8.0.35
+    created: "2023-11-28T04:34:15.553929225Z"
+    dependencies:
+    - name: common
+      repository: oci://registry-1.docker.io/bitnamicharts
+      tags:
+      - bitnami-common
+      version: 2.x.x
+    description: MySQL is a fast, reliable, scalable, and easy to use open source
+      relational database system. Designed to handle mission-critical, heavy-load
+      production applications.
+    digest: 3211687bd5b7540cb82131b0819a26a1438a080632390822822382a38bbf8958
+    home: https://bitnami.com
+    icon: https://bitnami.com/assets/stacks/mysql/img/mysql-stack-220x234.png
+    keywords:
+    - mysql
+    - database
+    - sql
+    - cluster
+    - high availability
+    maintainers:
+    - name: VMware, Inc.
+      url: https://github.com/bitnami/charts
+    name: mysql
+    sources:
+    - https://github.com/bitnami/charts/tree/main/bitnami/mysql
+    urls:
+    - https://github.com/RSRevanth/RSRevanth1.github.io.git/k8sb10-helm-charts/mysql-9.14.4.tgz
+    version: 9.14.4
+  solr:
+  - annotations:
+      category: Infrastructure
+      images: |
+        - name: os-shell
+          image: docker.io/bitnami/os-shell:11-debian-11-r91
+        - name: solr
+          image: docker.io/bitnami/solr:9.4.0-debian-11-r1
+      licenses: Apache-2.0
+    apiVersion: v2
+    appVersion: 9.4.0
+    created: "2023-11-28T04:34:15.56611942Z"
+    dependencies:
+    - condition: zookeeper.enabled
+      name: zookeeper
+      repository: oci://registry-1.docker.io/bitnamicharts
+      version: 12.x.x
+    - name: common
+      repository: oci://registry-1.docker.io/bitnamicharts
+      tags:
+      - bitnami-common
+      version: 2.x.x
+    description: Apache Solr is an extremely powerful, open source enterprise search
+      platform built on Apache Lucene. It is highly reliable and flexible, scalable,
+      and designed to add value very quickly after launch.
+    digest: a23db0df5c2bf59d439e288aa076473f64a84f43d711c3a38e5b2bfa0a2a76b4
+    home: https://bitnami.com
+    icon: https://bitnami.com/assets/stacks/solr/img/solr-stack-220x234.png
+    keywords:
+    - solr
+    - zookeeper
+    - apache
+    maintainers:
+    - name: VMware, Inc.
+      url: https://github.com/bitnami/charts
+    name: solr
+    sources:
+    - https://github.com/bitnami/charts/tree/main/bitnami/solr
+    urls:
+    - https://github.com/RSRevanth/RSRevanth1.github.io.git/k8sb10-helm-charts/solr-8.3.2.tgz
+    version: 8.3.2
+generated: "2023-11-28T04:34:15.542209778Z"
